@@ -4,11 +4,13 @@ plugins {
     `java-gradle-plugin`
     `kotlin-dsl`
     `maven-publish`
+    id("com.gradle.plugin-publish") version "1.2.0"
     kotlin("jvm") version "1.8.21"
 }
 
 group = "site.alxbun"
-version = "1.0-SNAPSHOT"
+description = "Gradle Buildinfo Plugin"
+version = "1.0.0"
 
 java.sourceCompatibility = JavaVersion.VERSION_11
 java.targetCompatibility = JavaVersion.VERSION_11
@@ -26,10 +28,15 @@ repositories {
 }
 
 gradlePlugin {
+    website.set("https://github.com/alxbun/BuildInfo-Plugin")
+    vcsUrl.set("https://github.com/alxbun/BuildInfo-Plugin.git")
     plugins {
         create("buildInfoPlugin") {
             id = "$group.build-info"
             implementationClass = "$group.BuildInfoPlugin"
+            displayName = project.name
+            description = project.description
+            tags.set(listOf("BuildInfo", "Version"))
         }
     }
 }
