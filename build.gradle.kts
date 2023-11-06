@@ -8,7 +8,7 @@ plugins {
     kotlin("jvm") version "1.8.21"
 }
 
-group = "site.alxbun"
+group = "com.github.alxbun"
 description = "Gradle Buildinfo Plugin"
 version = "1.0.0"
 
@@ -28,8 +28,8 @@ repositories {
 }
 
 gradlePlugin {
-    website.set("https://github.com/alxbun/BuildInfo-Plugin")
-    vcsUrl.set("https://github.com/alxbun/BuildInfo-Plugin.git")
+    website.set("https://github.com/alxbun/buildinfo-plugin")
+    vcsUrl.set("https://github.com/alxbun/buildInfo-plugin.git")
     plugins {
         create("buildInfoPlugin") {
             id = "$group.build-info"

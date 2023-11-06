@@ -1,4 +1,4 @@
-package site.alxbun
+package com.github.alxbun
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.logging.LogLevel

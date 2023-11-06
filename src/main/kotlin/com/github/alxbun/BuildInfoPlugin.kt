@@ -1,4 +1,4 @@
-package site.alxbun
+package com.github.alxbun
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
